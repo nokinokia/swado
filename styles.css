@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: 'Akronim', cursive;
+    background: linear-gradient(135deg, #FF9A8B 0%, #c02ec0 50%, #99d6ff 100%);
+    overflow-x: hidden;
+  }
+  
+  h1, h2 {
+    margin: 0;
+    color: #0fe49d;
+    font-size: 400%;
+  }
+
+  p {
+  margin: 0;
+    color: #58eaf5;
+    font-size: 200%;
+  }
+  
+  #home, #about, #features, #gallery {
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  #home {
+    background: linear-gradient(135deg, #12c2e9 0%, #c471ed 50%, #f64f59 100%);
+    height: 100vh;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .logo img {
+    width: 150px;
+    animation: spin 10s infinite linear;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .social-media a img {
+    margin: 0 10px;
+    animation: bounce 2s infinite alternate;
+  }
+  
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-20px); }
+  }
+  
+  #about, #features {
+    background: linear-gradient(135deg, #12c2e9 0%, #c471ed 50%, #f64f59 100%);
+  }
+  
+  #gallery {
+    background: linear-gradient(135deg, #FF9A8B 0%, #c02ec0 50%, #99d6ff 100%);
+  }
+  
+  .photo-row {
+    display: flex;
+    justify-content: space-around;
+    animation: scroll 10s linear infinite;
+  }
+  
+  .reverse {
+    animation-direction: reverse;
+  }
+  
+  .photo-row img {
+    width: 25%;
+  }
+  
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+  
+  .side-images img {
+    width: 35%;
+    animation: fade 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes fade {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
+  }
+  
+  .about-box, .feature-box, .feature-box1 {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    transform: skew(-10deg);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .photo-row img {
+      width: 90%;
+    }
+  
+    .side-images img {
+      width: 100%;
+    }
+  }
+  
+  #copy-button {
+    background: linear-gradient(135deg, #FF9A8B 0%, #c02ec0 50%, #99d6ff 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-top: 20px;
+    font-family: 'Kenia', sans-serif;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  #copy-button:hover {
+    background-color: #5d17ff;
+  }
